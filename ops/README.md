@@ -9,9 +9,9 @@
 | GitHub 仓库 | 已创建并推送 | https://github.com/frankf0424/frankf0424.github.io |
 | GitHub Pages 备用站 | 已启用，2026-10-02 验证 HTTP 200、HTTPS 与首页内容 | https://frankf0424.github.io/ |
 | Cloudflare Pages | 已连接 GitHub，2026-10-02 验证 HTTP 200、HTTPS 与首页内容 | https://frankf0424-github-io.pages.dev/ |
-| frankfu.online | DNS 托管在 Cloudflare；尚未绑定到 Pages，也未验证网页及 HTTPS | 待完成 |
+| frankfu.online 主站 | 已绑定 Cloudflare Pages；2026-10-02 验证 DNS、HTTP 200、HTTPS 与首页内容 | https://frankfu.online/ |
 
-域名和 HTTPS 只有通过实际访问验证后才在本表改为“已启用”。不要将未验证的地址对外宣传。
+主站域名和 HTTPS 已通过实际访问验证。Cloudflare 控制台刚绑定时可能暂时显示“正在初始化”；若之后仍显示异常，应复查自定义域状态。
 
 ## 日常更新
 
@@ -44,9 +44,9 @@
 ## 绑定 frankfu.online
 
 1. 先确保 pages.dev 地址工作正常。
-2. 在该 Pages 项目的 Custom domains 中添加 frankfu.online；如需 www.frankfu.online，也单独添加并选择一个作为规范地址。按照 Cloudflare 控制台的实际提示完成 DNS 配置。不要手工猜测解析目标。
-3. 等待域名状态激活和证书签发。分别检查 https://frankfu.online/ 与计划使用的 www 地址；确认没有证书错误、页面内容正确，且跳转方向符合预期。
-4. 主域名验证成功后，再为首页添加指向主域名的 canonical，并更新本文状态表。GitHub Pages 地址继续作为备用入口。
+2. 在该 Pages 项目的“自定义域”中添加 frankfu.online。Cloudflare 于 2026-10-02 自动创建了名称为 @、目标为 frankf0424-github-io.pages.dev 的 CNAME 记录，TTL 为“自动”。不要另建冲突的 A、AAAA 或 CNAME 记录。
+3. 等待 DNS 和证书生效。2026-10-02 已通过 `dig +short frankfu.online A` 得到 Cloudflare 地址，并通过 `curl -I https://frankfu.online/` 验证 HTTP 200、HTTPS 和首页内容。若控制台仍显示“正在初始化”，稍后复查其状态。
+4. 首页 canonical 指向 https://frankfu.online/ 。GitHub Pages 地址继续作为备用入口。当前没有配置 www.frankfu.online；如果将来需要，须在 Pages 中单独添加，并确定规范地址和跳转规则。
 
 ## 发布后检查
 
