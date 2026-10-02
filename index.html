@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <meta name="description" content="Longjun Fu 的个人开发者主页。关注后端工程、数据处理与 AI 应用。">
+  <title>Longjun Fu — 开发者主页</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">跳到主要内容</a>
+  <header class="site-header" id="top">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Longjun Fu"><span class="brand-icon">LF<span>.</span></span><span>Longjun Fu</span></a>
+      <nav class="main-nav" aria-label="主导航" data-i18n-aria="navLabel">
+        <a href="#about" data-i18n="navAbout">关于</a>
+        <a href="#focus" data-i18n="navFocus">方向</a>
+        <!-- 作品上线后，再启用作品区及对应导航入口。 -->
+        <a href="#projects" class="hidden" data-i18n="navProjects">作品</a>
+        <a href="#contact" data-i18n="navContact">联系</a>
+      </nav>
+      <div class="language-switch" role="group" aria-label="语言" data-i18n-aria="languageLabel">
+        <button type="button" data-lang="zh" lang="zh-CN" aria-pressed="true">中文</button>
+        <span aria-hidden="true">/</span>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span><span data-i18n="eyebrow">个人开发者主页</span></p>
+        <h1 id="hero-title">Longjun Fu<span class="accent">.</span></h1>
+        <p class="tagline" data-i18n="tagline">构建后端系统，探索数据处理与 AI 应用。</p>
+        <p class="hero-description" data-i18n="heroDescription">我喜欢把想法做成可运行、可解释的项目，并在这里记录实现过程、技术取舍和学到的东西。</p>
+        <a class="primary-link" href="https://github.com/frankf0424" target="_blank" rel="noopener noreferrer"><span data-i18n="viewGitHub">查看 GitHub</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-grid"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+        <div class="art-core">LF</div><span class="art-cross cross-a">+</span><span class="art-cross cross-b">+</span>
+        <span class="art-caption" data-i18n="artCaption">后端 / 数据 / AI</span>
+      </div>
+      <div class="hero-bottom"><span data-i18n="heroIndex">后端 · 数据 · AI</span><a href="#about" data-i18n="explore">继续了解 ↓</a></div>
+    </section>
+    <section class="content-section" id="about" aria-labelledby="about-title">
+      <div class="shell section-grid">
+        <div><p class="section-number">01 / <span data-i18n="navAbout">关于</span></p><h2 id="about-title" data-i18n="aboutTitle">关于我</h2></div>
+        <div class="section-body prose">
+          <p data-i18n="aboutOne">我主要关注后端服务、已有系统的改造和数据处理，也在实践 AI 应用与 Agent 工具的工程化。我做过 Go 和 Java 服务开发，接触过 Kafka、Flink、Redis、MySQL，以及模型服务接入和 MCP 工具开发。</p>
+          <p data-i18n="aboutTwo">我重视弄清问题与边界，做出可以运行的实现，再通过测试、观察和复盘逐步改进。这个网站用于分享我独立完成的公开项目及其设计过程。</p>
+        </div>
+      </div>
+    </section>
+    <section class="content-section focus-section" id="focus" aria-labelledby="focus-title">
+      <div class="shell">
+        <div class="section-grid focus-heading">
+          <div><p class="section-number">02 / <span data-i18n="navFocus">方向</span></p><h2 id="focus-title" data-i18n="focusTitle">关注方向</h2></div>
+          <p class="focus-intro" data-i18n="focusIntro">围绕真实问题，持续学习、构建和验证。</p>
+        </div>
+        <div class="focus-grid">
+          <article class="focus-card"><span class="card-number">01</span><span class="focus-icon" aria-hidden="true">{ }</span><h3 data-i18n="backendTitle">后端工程</h3><p data-i18n="backendDescription">使用 Go 和 Java 构建服务，关注接口设计、系统集成、已有系统改造和运行问题排查。</p><span class="tags">Go / Java</span></article>
+          <article class="focus-card"><span class="card-number">02</span><span class="focus-icon" aria-hidden="true">≋</span><h3 data-i18n="dataTitle">数据处理</h3><p data-i18n="dataDescription">关注异步数据链路、Kafka、Flink，以及统计结果的验证和核对。</p><span class="tags">Kafka / Flink</span></article>
+          <article class="focus-card"><span class="card-number">03</span><span class="focus-icon" aria-hidden="true">✳</span><h3 data-i18n="aiTitle">AI 应用</h3><p data-i18n="aiDescription">探索模型服务接入、Agent 与 MCP 工具，关注资料来源、工具调用、失败处理和能力边界。</p><span class="tags">Agents / MCP</span></article>
+        </div>
+      </div>
+    </section>
+    <!-- 有真实公开作品后，按照 README 中的字段添加作品区，再启用导航。 -->
+    <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="shell section-grid">
+        <div><p class="section-number">03 / <span data-i18n="navContact">联系</span></p><h2 id="contact-title"><span data-i18n="contactTitle">保持联系</span><span class="accent">.</span></h2></div>
+        <div class="section-body"><p class="contact-intro" data-i18n="contactDescription">欢迎通过 GitHub 查看我的项目，或通过邮箱与我交流。</p>
+          <div class="contact-links">
+            <a href="https://github.com/frankf0424" target="_blank" rel="noopener noreferrer"><span>GitHub</span><span>github.com/frankf0424 ↗</span></a>
+            <a href="mailto:fulongjun33@gmail.com"><span data-i18n="emailLabel">邮箱</span><span>fulongjun33@gmail.com ↗</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>© <span id="year">2026</span> Longjun Fu</span><a href="#top" data-i18n="backToTop">返回顶部 ↑</a></div></footer>
+</body>
+</html>
