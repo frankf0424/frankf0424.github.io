@@ -9,9 +9,9 @@
 | GitHub 仓库 | 已创建并推送 | https://github.com/frankf0424/frankf0424.github.io |
 | GitHub Pages 备用站 | 已启用，2026-10-02 验证 HTTP 200、HTTPS 与首页内容 | https://frankf0424.github.io/ |
 | Cloudflare Pages | 已连接 GitHub，2026-10-02 验证 HTTP 200、HTTPS 与首页内容 | https://frankf0424-github-io.pages.dev/ |
-| frankfu.online 主站 | 已绑定 Cloudflare Pages；2026-10-02 验证 DNS、HTTP 200、HTTPS 与首页内容 | https://frankfu.online/ |
+| frankfu.online 主站 | 已绑定 Cloudflare Pages；2026-10-02 控制台显示“活动”“SSL 已启用”，并验证 DNS、HTTP 200、HTTPS 与首页内容 | https://frankfu.online/ |
 
-主站域名和 HTTPS 已通过实际访问验证。Cloudflare 控制台刚绑定时可能暂时显示“正在初始化”；若之后仍显示异常，应复查自定义域状态。
+主站域名和 HTTPS 已通过实际访问验证。Cloudflare 控制台刚绑定时可能暂时显示“正在初始化”或“正在验证”；可在自定义域详情中点击“检查 DNS 记录”复查。
 
 ## 日常更新
 
@@ -45,7 +45,7 @@
 
 1. 先确保 pages.dev 地址工作正常。
 2. 在该 Pages 项目的“自定义域”中添加 frankfu.online。Cloudflare 于 2026-10-02 自动创建了名称为 @、目标为 frankf0424-github-io.pages.dev 的 CNAME 记录，TTL 为“自动”。不要另建冲突的 A、AAAA 或 CNAME 记录。
-3. 等待 DNS 和证书生效。2026-10-02 已通过 `dig +short frankfu.online A` 得到 Cloudflare 地址，并通过 `curl -I https://frankfu.online/` 验证 HTTP 200、HTTPS 和首页内容。若控制台仍显示“正在初始化”，稍后复查其状态。
+3. 等待 DNS 和证书生效。2026-10-02 已通过 `dig +short frankfu.online A` 得到 Cloudflare 地址，并通过 `curl -I https://frankfu.online/` 验证 HTTP 200、HTTPS 和首页内容；控制台随后显示“活动”“SSL 已启用”。
 4. 首页 canonical 指向 https://frankfu.online/ 。GitHub Pages 地址继续作为备用入口。当前没有配置 www.frankfu.online；如果将来需要，须在 Pages 中单独添加，并确定规范地址和跳转规则。
 
 ## 发布后检查
